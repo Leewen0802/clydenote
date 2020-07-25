@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'cereal';
+	src: url('../font/cereal.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.tippy-tooltip.light-theme .tippy-backdrop {
+	background-color: #FFFFFF;
+	font: 400 16px 'cereal', sans-serif;
+	color: #8898AA;
+}
+
+.tippy-tooltip.light-theme {
+	background-color: #FFFFFF;
+	border: 1px solid #F2F2F2;
+	border-radius: 50px;
+	font: 400 16px 'cereal', sans-serif;
+	color: #8898AA;
+}

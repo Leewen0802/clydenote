@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="Description" content="Super simple lightning fast one page notes app.">
+<title>Clyde Note</title>
+<link rel="icon" href="static/images/favicon.png">
+<link rel="stylesheet" href="static/css/app.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/tippy.css">
+<script src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<article class="animate__animated animate__fadeIn">
+<textarea id="note" autofocus></textarea>
+<button onclick="download();" data-tippy="下載">
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMjcuMzMzM0gyNC45OTY5QzI1LjU0OTIgMjcuMzMzMyAyNS45OTY5IDI3Ljc4MSAyNS45OTY5IDI4LjMzMzNDMjUuOTk2OSAyOC44Mzk2IDI1LjYyMDcgMjkuMjU4IDI1LjEzMjYgMjkuMzI0MkwyNC45OTY5IDI5LjMzMzNIN0M2LjQ0NzcyIDI5LjMzMzMgNiAyOC44ODU2IDYgMjguMzMzM0M2IDI3LjgyNzEgNi4zNzYyMSAyNy40MDg3IDYuODY0MzEgMjcuMzQyNUw3IDI3LjMzMzNIMjQuOTk2OUg3Wk0xNS44NDQ1IDIuNjY5NzdMMTYgMi42NjA4QzE2LjY4MzggMi42NjA4IDE3LjI0NzMgMy4xNzU1MiAxNy4zMjQ0IDMuODM4NjRMMTcuMzMzMyAzLjk5NDEzVjIwLjc4MDhMMjEuNzI1NCAxNi4zOTA0QzIyLjIwNjEgMTUuOTA5OCAyMi45NjI0IDE1Ljg3MjkgMjMuNDg1NCAxNi4yNzk3TDIzLjYxMSAxNi4zOTA2QzI0LjA5MTYgMTYuODcxMyAyNC4xMjg1IDE3LjYyNzYgMjMuNzIxOCAxOC4xNTA2TDIzLjYxMDggMTguMjc2MkwxNi45NDczIDI0LjkzODRDMTYuNDY2OSAyNS40MTg3IDE1LjcxMTEgMjUuNDU1OSAxNS4xODggMjUuMDQ5N0wxNS4wNjI0IDI0LjkzODlMOC4zOTExNyAxOC4yNzY4QzcuODcwMTEgMTcuNzU2NCA3Ljg2OTU0IDE2LjkxMjIgOC4zODk4OCAxNi4zOTEyQzguODcwMiAxNS45MTAyIDkuNjI2NDggMTUuODcyNyAxMC4xNDk4IDE2LjI3OUwxMC4yNzU1IDE2LjM4OTlMMTQuNjY2NyAyMC43NzQxVjMuOTk0MTNDMTQuNjY2NyAzLjMxMDM1IDE1LjE4MTQgMi43NDY3OSAxNS44NDQ1IDIuNjY5NzdMMTYgMi42NjA4TDE1Ljg0NDUgMi42Njk3N1oiIGZpbGw9IiMzRkU5QkEiLz4KPC9zdmc+Cg==">
+</button>
+</article>
+<script src="static/js/app.js"></script>
+<script src="static/js/filesaver.min.js"></script>
+<script>
+function download() {
+var save = document.getElementById("note").value;
+var blob = new Blob([save], {
+type: "text/plain;charset=utf-8"
+});
+saveAs(blob, "note.txt");
+}
+</script>
+<script src="static/js/tippy.min.js"></script>
+<script>
+tippy.setDefaults({
+arrow: false,
+delay: 0,
+size: 'small',
+placement: 'left',
+animation: 'perspective',
+theme: 'light'
+})
+</script>
+</body>
+</html>
